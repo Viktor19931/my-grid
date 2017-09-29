@@ -1,0 +1,319 @@
+
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+    font: 16px 'Love Ya Like A Sister', sans-serif;
+}
+
+h1, h2, h3, h4, h5, {
+    font: 'Patrick Hand SC', cursive;
+}
+
+h1 {
+    font-size: 38px;
+    align-self: center;
+    justify-self: center;
+}
+
+h2 {
+    font-size: 30px;
+    margin:40px 0 0 0;
+}
+
+h3 {
+    font-size: 34px; 
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 20px
+}
+
+h4, h3 {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+#my-name, .arrow, .skills img {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+}
+
+header {
+    display: grid;
+    grid-template-areas: "menu" "h";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+header div {
+    grid-area: h;
+}
+
+header nav {
+    justify-self: end;
+    text-align: center;
+    margin: 20px 20px 0 0;
+}
+
+#menu {
+    grid-area: menu;
+}
+
+#menu li {
+    list-style-type: none;
+    display:inline-block;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: black;
+    margin: 0 8px;
+    background-color: #f3ecdc;
+    //align-content: center;
+    padding: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "photo sidebar"
+                         "content sidebar"
+                         "skills skills";
+    grid-template-rows: auto;
+    grid-template-columns: 2.5fr minmax(150px,1fr);
+    grid-gap: 10px;
+    margin-top: 10px; 
+}
+
+#photo {
+    grid-area: photo;
+    display: grid;
+}
+
+#photo img {
+    width: 500px;
+    align-self: center;
+    justify-self: center;
+}
+
+#content-box {
+    grid-area: content;
+    display: grid;
+    grid-template: auto/ 70px auto 70px;
+}
+
+#about-me {
+    text-align: center;
+}
+
+#about-me {
+    padding: 0 30px;
+}
+
+#about-me p {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+
+aside {
+    grid-area: sidebar;
+    grid-template: 1fr 1fr/ minmax(230px,1fr);
+    text-align: center;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+aside nav {
+    width: 230px;
+    margin: 50px auto 0 auto;
+    padding-bottom: 50px;
+}
+
+#cv-image {
+    display: block;
+    width: 230px;
+    height: 97px;
+    margin: 0 auto;
+}
+
+#cv-image:hover {
+    opacity: 0.7;
+}
+
+nav#social-networks a {
+    display: inline-grid;
+    width: 64px;
+    height: 64px;
+    margin: 5px;
+}
+
+nav a.img-facebook {
+    background: url(../img/facebook-bg.png) no-repeat center;
+}
+
+nav a.img-twitter {
+    background: url(../img/twitter-bg.png) no-repeat center;
+}
+
+nav a.img-linkedin {
+    background: url(../img/linkedin-bg.png) no-repeat center;
+}
+
+nav a.img-google-plus {
+    background: url(../img/google-plus-bg.png) no-repeat center;
+}
+
+nav a.img-youtube {
+    background: url(../img/youtube-bg.png) no-repeat center;
+}
+
+nav a.img-instagram {
+    background: url(../img/instagram-bg.png) no-repeat center;
+}
+
+#solcial-networks a img {
+    width: 64px;
+    height: 64px;
+}
+
+#social-networks a:hover img{
+    opacity: 0;
+}
+
+#h-social {
+    border-top: 1px solid grey;
+    padding-top: 50px;
+    margin: 50px auto 0 auto;
+}
+
+#h-cv {
+    padding: 40px 0;
+    margin: 0;
+}
+
+#skills {
+    grid-area: skills;
+    display: grid;
+    grid-template: auto auto/ auto;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+#skills div {
+    display: grid;
+    grid-template: repeat(3, 1fr)/1fr 1fr;
+}
+
+#skills div section {
+    display: grid;
+    grid-template: auto/ 1fr 1fr;
+}
+
+.skills img {
+    height: 70px;
+    margin: 30px auto;
+}
+
+.skills h4 {
+    justify-self: start;
+}
+                    
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-areas: "map form";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+footer div#map {
+    grid-area: map;
+}
+
+footer form {
+    grid-area: form;
+}
+
+#map {
+    width: 510px;
+    height: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        //height: 400px;
+        grid-auto-columns: 100%;
+        grid-auto-rows: 100%;
+    }
+    
+    header nav {
+        width: 100%;
+        justify-self: none;
+        margin: 0;
+        cursor: pointer;
+    }
+    
+    header nav ul {
+        overflow: hidden;
+        background: #505050;
+        //height: 0;
+    }
+    
+    header nav ul.open {
+        font-size: 20px;
+        height: auto;
+        margin: 0;
+        grid-template: repeat(1fr,4)/100%;
+        display: grid;
+    }
+    
+    #menu li {
+        height: 40px;
+        align-items: center;
+    }
+    
+    #menu li a{
+        background-color: #505050;
+        padding: 0;
+        align-items: center;
+    }
+    
+    main {
+        display: grid;
+        grid-template-areas: "photo" 
+                            "content" 
+                            "sidebar" 
+                            "skills";
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-gap: 10px;
+        margin-top: 10px; 
+    }
+    
+    .burger-nav {
+        display: block;
+        height: 40px;
+        width: 100%;
+        background: url(../img/burger-menu.png) no-repeat 98% center;
+        background-color: #404040;
+    }
+    
+    aside nav {
+        width: 232px;
+    }
+    
+    .skills img {
+        margin: 20px auto;
+    }
+    
+    footer {
+        grid-template-areas: "map" "form";
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+
+    }
+}
