@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet"> 
@@ -15,11 +16,12 @@
         </div>
         <nav>
             <a class="burger-nav"></a>
-            <ul id="menu" class="nav open">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#news">About me</a></li>
-                <li><a href="#contact">Skills</a></li>
-                <li><a href="#about">Contacts</a></li>
+            <ul id="menu" class="nav">
+                <li><a class="scrollTo" href="index.html">Home</a></li>
+                <li><a class="scrollTo" href="#" data-scrollTo="about-me">About me</a></li>
+                <li><a class="scrollTo" href="#" data-scrollTo="skills">Skills</a></li>
+                <li><a class="scrollTo" href="#" data-scrollTo="my-location">My location</a></li>
+                <li><a class="scrollTo" href="#" data-scrollTo="contact-me">Contact me</a></li>
             </ul>
         </nav>         
     </header>
@@ -46,12 +48,12 @@
             </div>
             <h3 id="h-social">Social Media</h3>
             <nav id="social-networks">
-                <a class="img-facebook" href="https://www.google.com"><img src="img/facebook.png" alt="facebook"></a> 
-                <a class="img-twitter" href="https://www.google.com"><img src="img/twitter.png" alt="twitter"></a> 
-                <a class="img-linkedin" href="https://www.google.com"><img src="img/linkedin.png" alt="linkedin"></a> 
-                <a class="img-google-plus" href="https://www.google.com"><img src="img/google-plus.png" alt="google plus"></a> 
-                <a class="img-youtube" href="https://www.google.com"><img src="img/youtube.png" alt="youtube"></a> 
-                <a class="img-instagram" href="https://www.google.com"><img src="img/instagram.png" alt=""></a> 
+                <a class="img-facebook" href="https://www.facebook.com/viktor.viktorovich.315"><img src="img/facebook.png" alt="facebook"></a> 
+                <a class="img-twitter" href="https://twitter.com/ViktorHordubey"><img src="img/twitter.png" alt="twitter"></a> 
+                <a class="img-linkedin" href="https://www.linkedin.com/in/viktor-hardubej-426007150/"><img src="img/linkedin.png" alt="linkedin"></a> 
+                <a class="img-google-plus" href="https://plus.google.com/113567837321928533634"><img src="img/google-plus.png" alt="google plus"></a> 
+                <a class="img-youtube" href="https://www.youtube.com/channel/UCNm8Cv9T_TN0j7pw7XN41VA?view_as=subscriber"><img src="img/youtube.png" alt="youtube"></a> 
+                <a class="img-instagram" href="https://www.instagram.com/viktor932/"><img src="img/instagram.png" alt=""></a> 
             </nav> 
         </aside>
         <section id="skills">
@@ -79,21 +81,39 @@
                 </section>
             </div>
         </section>             
-   </main>
-   <footer>
+    </main>
+    <footer>
     <div>
-           <h4>My location </h4>
+           <h5 id="my-location">My location </h5>
            <div id="map">
            </div>
     </div>
-    <form action="#" method="post">
-           <h4>Get in touch</h4>
-           <label>Your name :<input type="text" name="firstname" placeholder="Name" required></label>
-           <label>Your email :<input type="email" name="mail" placeholder="Email" required></label><br>
-           <textarea name="message" cols="45" rows="10" placeholder="text here..." required></textarea><br>
-           <input type="submit" value="Send">
+    <form>
+           <h5 id="contact-me">Contact me</h5>
+           <p>Name *</p>
+           <label><input id="firstName" type="text" required></label>
+           <label><input id="secondName" type="text" required></label>
+           <div>
+               <spam id="spam-firstname">First Name</spam>
+               <spam id="spam-lastname">Last Name</spam>
+           </div>
+           <p>Email Address *</p>
+           <label><input id="email" type="email" name="mail" required></label><br>
+           <p>Website</p>
+           <label><input id="website" type="text" placeholder="http://"></label><br>
+           <p>Subject *</p>
+           <label><input id="subject" type="text"></label><br>
+           <p>Message *</p>
+           <textarea id="message" name="Message" required></textarea><br>
+           <div id="submit">
+               <input type="submit" value="SUBMIT">
+           </div>
     </form>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="              crossorigin="anonymous"></script>
+    <script src="jscript/menu.js"></script>
+    <script src="jscript/scrollTo.js"></script>
     <script src="jscript/map.js"></script>
+    <script src="jscript/form.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD-EmoYPmp4RDX8tfofbNFnTpiw4vRgw4&callback=myMap"></script>
 </body>  
